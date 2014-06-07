@@ -1,3 +1,11 @@
+(ns clojure1.core
+  (:gen-class))
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println "Hello, World!"))
+
 ;; Anything you type in here will be executed
 ;; immediately with the results shown on the
 ;; right.
@@ -10,9 +18,6 @@
 (defn square
   [x]
   (* x x)
-  1
-  2
-  3
   )
 (square 2)
 
@@ -45,13 +50,6 @@ apply
 ;;given y, when y >= 0 makes y*y=x
 
 
-(defn square1
-  [x]
-  (* x x)
-  )
-
-(square1 2)
-
 (defn average
   [x y]
   (/ (+ x y) 2)
@@ -61,10 +59,10 @@ apply
 
 (defn good-enough
   [guess x]
-  (< (abs (- (square1 guess) x)) 0.001)
+  (<= (abs (- (square guess) x)) 0.001)
  )
 
-(good-enough 2 4)
+(good-enough 2 4.001)
 
 (defn sqrt-iter
   [guess x]
@@ -76,7 +74,3 @@ apply
   )
 
 (sqrt-iter 1 5)
-
-
-
-
