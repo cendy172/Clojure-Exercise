@@ -7,7 +7,9 @@
   (testing "factorial by recursion"
     (is (= 720 (factorial-recur 6))
      )
-    (is (= 1 (factorial-recur 6))
+    (is (= 1 (factorial-recur 1))
+     )
+    (is (= 6 (factorial-recur 3))
      )
     )
   )
