@@ -8,5 +8,12 @@
 
 (defn factorial-recur
   [x]
-  ()
+  (loop
+    [total x]
+    (if(= x 1) total
+      (* total (factorial-recur (- x 1)))
+      )
+    )
   )
+
+(factorial-recur 1)
