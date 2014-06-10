@@ -11,5 +11,14 @@
      )
     (is (= 6 (factorial-recur 3))
      )
-    )
+   )
+
+  (testing "factorial by loop"
+    (is (= 720 (factorial-loop 6))
+     )
+    (is (= 1 (factorial-loop 1))
+     )
+    (is (= 6 (factorial-loop 3))
+     )
+   )
   )
