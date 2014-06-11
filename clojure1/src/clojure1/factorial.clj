@@ -16,4 +16,20 @@
     )
   )
 
-(factorial-recur 1)
+(factorial-recur 3)
+
+(defn factorial-loop
+  [x]
+  (loop
+    [i 1, total 1]
+    (if(> i x) total
+      (recur (inc i)(* i total ))
+    )
+   )
+ )
+
+(* 1 2 3)
+
+(take 5 (iterate inc 1))
+
+(factorial-loop 5)
