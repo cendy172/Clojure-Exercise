@@ -23,7 +23,7 @@
   (loop
     [i 1, total 1]
     (if(> i x) total
-      (recur (inc i)(* i total ))
+      (recur (inc i)(* i total))
     )
    )
  )
